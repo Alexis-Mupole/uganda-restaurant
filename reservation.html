@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservations | uganda RESTAURANT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1a1a1a',
+            secondary: '#c9a962',
+            cream: '#faf7f2',
+            muted: '#6b6b6b'
+          },
+          fontFamily: {
+            playfair: ['Playfair Display', 'serif'],
+            inter: ['Inter', 'sans-serif'],
+            cormorant: ['Cormorant Garamond', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .font-playfair { font-family: 'Playfair Display', serif; }
+    .font-cormorant { font-family: 'Cormorant Garamond', serif; }
+  </style>
+</head>
+<body class="bg-cream text-primary">
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center">
+          <span class="font-playfair text-2xl font-semibold text-secondary tracking-wide">uganda</span>
+          <span class="font-playfair text-2xl text-cream ml-2">RESTAURANT</span>
+        </a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-cream/90 hover:text-secondary transition-colors duration-300 text-sm tracking-wider uppercase">Home</a>
+          <a href="about.html" class="text-cream/90 hover:text-secondary transition-colors duration-300 text-sm tracking-wider uppercase">About</a>
+          <a href="menu.html" class="text-cream/90 hover:text-secondary transition-colors duration-300 text-sm tracking-wider uppercase">Menu</a>
+          <a href="gallery.html" class="text-cream/90 hover:text-secondary transition-colors duration-300 text-sm tracking-wider uppercase">Gallery</a>
+          <a href="contact.html" class="text-cream/90 hover:text-secondary transition-colors duration-300 text-sm tracking-wider uppercase">Contact</a>
+          <a href="reservation.html" class="bg-secondary text-primary px-6 py-2.5 text-sm tracking-wider uppercase hover:bg-secondary/90 transition-colors duration-300">Reserve</a>
+        </div>
+        <a href="reservation.html" class="md:hidden bg-secondary text-primary px-4 py-2 text-xs tracking-wider uppercase">Reserve</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-20">
+    <section class="relative py-20 lg:py-32 bg-primary">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+        <p class="text-secondary tracking-[0.2em] uppercase text-sm mb-4">Reservations</p>
+        <h1 class="font-playfair text-5xl md:text-6xl text-cream mb-6">Book Your Table</h1>
+        <p class="font-cormorant text-cream/70 text-xl italic max-w-2xl mx-auto">Reserve your table for an unforgettable dining experience</p>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32 bg-secondary">
+      <div class="max-w-4xl mx-auto px-6 lg:px-8">
+        <div class="bg-white p-8 md:p-12 shadow-xl rounded-lg">
+          <h2 class="font-playfair text-3xl text-primary mb-8 text-center">Make a Reservation</h2>
+          
+          <form id="reservationForm" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm tracking-wider uppercase text-muted mb-2">
+                  <svg class="inline w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" stroke-width="2"/><path stroke-width="2" d="M16 2v4M8 2v4M3 10h18"/></svg>
+                  Date
+                </label>
+                <input type="date" name="date" required class="w-full border border-primary/20 px-4 py-3 focus:border-secondary focus:outline-none transition-colors duration-300" />
+              </div>
+              <div>
+                <label class="block text-sm tracking-wider uppercase text-muted mb-2">
+                  <svg class="inline w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/><path stroke-width="2" d="M12 6v6l4 2"/></svg>
+                  Time
+                </label>
+                <select name="time" required class="w-full border border-primary/20 px-4 py-3 focus:border-secondary focus:outline-none transition-colors duration-300">
+                  <option value="">Select time</option>
+                  <option value="08:00">08:00 AM</option>
+                  <option value="09:00">09:00 AM</option>
+                  <option value="10:00">10:00 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="12:00">12:00 PM</option>
+                  <option value="13:00">01:00 PM</option>
+                  <option value="14:00">02:00 PM</option>
+                  <option value="15:00">03:00 PM</option>
+                  <option value="16:00">04:00 PM</option>
+                  <option value="17:00">05:00 PM</option>
+                  <option value="18:00">06:00 PM</option>
+                  <option value="19:00">07:00 PM</option>
+                  <option value="20:00">08:00 PM</option>
+                  <option value="21:00">09:00 PM</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm tracking-wider uppercase text-muted mb-2">
+                <svg class="inline w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                Number of Guests
+              </label>
+              <select name="guests" required class="w-full border border-primary/20 px-4 py-3 focus:border-secondary focus:outline-none transition-colors duration-300">
+                <option value="">Select party size</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8 Guests</option>
+                <option value="9">9 Guests</option>
+                <option value="10">10+ Guests</option>
+              </select>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm tracking-wider uppercase text-muted mb-2">Full Name</label>
+                <input type="text" name="name" required placeholder="John Muwonge" class="w-full border border-primary/20 px-4 py-3 focus:border-secondary focus:outline-none transition-colors duration-300" />
+              </div>
+              <div>
+                <label class="block text-sm tracking-wider uppercase text-muted mb-2">Email</label>
+                <input type="email" name="email" required placeholder="john@example.com" class="w-full border border-primary/20 px-4 py-3 focus:border-secondary focus:outline-none transition-colors duration-300" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm tracking-wider uppercase text-muted mb-2">Phone Number</label>
+              <input type="tel" name="phone" placeholder="+256 700 123 456" class="w-full border border-primary/20 px-4 py-3 focus:border-secondary focus:outline-none transition-colors duration-300" />
+            </div>
+
+            <div>
+              <label class="block text-sm tracking-wider uppercase text-muted mb-2">Special Requests</label>
+              <textarea name="requests" rows="3" placeholder="Allergies, celebrations, seating preferences..." class="w-full border border-primary/20 px-4 py-3 focus:border-secondary focus:outline-none transition-colors duration-300 resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-primary text-cream py-4 text-sm tracking-wider uppercase font-medium hover:bg-primary/90 transition-colors duration-300">
+              Confirm Reservation
+            </button>
+          </form>
+
+          <div id="successMessage" class="hidden text-center py-12">
+            <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <h3 class="font-playfair text-3xl text-primary mb-4">Reservation Confirmed!</h3>
+            <p class="text-muted mb-8">Thank you for your reservation. We look forward to serving you!</p>
+            <button onclick="resetForm()" class="bg-secondary text-primary px-8 py-3 text-sm tracking-wider uppercase hover:bg-secondary/90 transition-colors duration-300">
+              Make Another Reservation
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <p class="text-primary/80 mb-4">Or call us directly:</p>
+          <a href="tel:+256414123456" class="text-2xl font-playfair text-primary hover:text-secondary transition-colors">+256 414 123 456</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-cream">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="font-playfair text-3xl text-primary mb-4">Reservation Information</h2>
+          <div class="w-16 h-0.5 bg-secondary mx-auto" />
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center bg-white p-8 rounded-lg shadow-sm">
+            <svg class="w-12 h-12 text-secondary mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/><path stroke-width="2" d="M12 6v6l4 2"/></svg>
+            <h3 class="font-playfair text-xl text-primary mb-2">Opening Hours</h3>
+            <p class="text-muted text-sm">Monday - Sunday<br/>8:00 AM - 10:00 PM<br/><span class="text-secondary">Happy Hour: 4PM - 7PM</span></p>
+          </div>
+          <div class="text-center bg-white p-8 rounded-lg shadow-sm">
+            <svg class="w-12 h-12 text-secondary mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <h3 class="font-playfair text-xl text-primary mb-2">Party Size</h3>
+            <p class="text-muted text-sm">We accommodate parties of 1-20 guests. For groups larger than 10, please call us to arrange special arrangements.</p>
+          </div>
+          <div class="text-center bg-white p-8 rounded-lg shadow-sm">
+            <svg class="w-12 h-12 text-secondary mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <h3 class="font-playfair text-xl text-primary mb-2">Cancellation Policy</h3>
+            <p class="text-muted text-sm">Please cancel at least 24 hours in advance. No-shows and late cancellations may be subject to a fee.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-primary pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div>
+          <div class="mb-6"><span class="font-playfair text-2xl font-semibold text-secondary">uganda</span><span class="font-playfair text-2xl text-cream ml-1">RESTAURANT</span></div>
+          <p class="text-cream/60 text-sm">Experience the authentic flavors of Uganda in the heart of Kampala.</p>
+        </div>
+        <div>
+          <h4 class="text-cream font-medium mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="text-cream/60 hover:text-secondary">Home</a></li>
+            <li><a href="about.html" class="text-cream/60 hover:text-secondary">About</a></li>
+            <li><a href="menu.html" class="text-cream/60 hover:text-secondary">Menu</a></li>
+            <li><a href="contact.html" class="text-cream/60 hover:text-secondary">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-cream font-medium mb-4 text-sm uppercase tracking-wider">Hours</h4>
+          <ul class="space-y-2 text-sm text-cream/60">
+            <li>Mon - Sun: 8AM - 10PM</li>
+            <li>Happy Hour: 4PM - 7PM</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-cream font-medium mb-4 text-sm uppercase tracking-wider">Contact</h4>
+          <ul class="space-y-2 text-sm text-cream/60">
+            <li>Plot 42, Kampala Road</li>
+            <li>+256 414 123 456</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-cream/10 pt-8 text-center">
+        <p class="text-cream/40 text-sm">© 2024 uganda Restaurant. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('reservationForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('reservationForm').classList.add('hidden');
+      document.getElementById('successMessage').classList.remove('hidden');
+    });
+
+    function resetForm() {
+      document.getElementById('reservationForm').classList.remove('hidden');
+      document.getElementById('successMessage').classList.add('hidden');
+      document.getElementById('reservationForm').reset();
+    }
+
+    document.querySelector('input[name="date"]').min = new Date().toISOString().split('T')[0];
+  </script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Menu | uganda RESTAURANT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1a1a1a',
+            secondary: '#c9a962',
+            accent: '#8b4513',
+            cream: '#faf7f2',
+            dark: '#0d0d0d',
+            muted: '#6b6b6b'
+          },
+          fontFamily: {
+            playfair: ['Playfair Display', 'serif'],
+            inter: ['Inter', 'sans-serif'],
+            cormorant: ['Cormorant Garamond', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+    .font-playfair { font-family: 'Playfair Display', serif; }
+    .font-cormorant { font-family: 'Cormorant Garamond', serif; }
+  </style>
+</head>
+<body class="bg-cream text-primary">
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center">
+          <span class="font-playfair text-2xl font-semibold text-secondary tracking-wide">uganda</span>
+          <span class="font-playfair text-2xl text-cream ml-2">RESTAURANT</span>
+        </a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-cream/90 hover:text-secondary transition-colors duration-300 text-sm tracking-wider uppercase">Home</a>
+          <a href="about.html" class="text-cream/90 hover:text-secondary transition-colors duration-300 text-sm tracking-wider uppercase">About</a>
+          <a href="menu.html" class="text-secondary font-medium text-sm tracking-wider uppercase">Menu</a>
+          <a href="gallery.html" class="text-cream/90 hover:text-secondary transition-colors duration-300 text-sm tracking-wider uppercase">Gallery</a>
+          <a href="contact.html" class="text-cream/90 hover:text-secondary transition-colors duration-300 text-sm tracking-wider uppercase">Contact</a>
+          <a href="reservation.html" class="bg-secondary text-primary px-6 py-2.5 text-sm tracking-wider uppercase hover:bg-secondary/90 transition-colors duration-300">Reserve</a>
+        </div>
+        <a href="reservation.html" class="md:hidden bg-secondary text-primary px-4 py-2 text-xs tracking-wider uppercase">Reserve</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-20">
+    <section class="relative py-20 lg:py-32 bg-primary">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+        <p class="text-secondary tracking-[0.2em] uppercase text-sm mb-4">Our Menu</p>
+        <h1 class="font-playfair text-5xl md:text-6xl text-cream mb-6">Authentic Ugandan Cuisine</h1>
+        <p class="font-cormorant text-cream/70 text-xl italic max-w-2xl mx-auto">Taste the rich flavors of Uganda, prepared with love and the freshest local ingredients</p>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32 bg-cream">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="font-playfair text-4xl md:text-5xl text-primary mb-4">Starters</h2>
+          <div class="w-16 h-0.5 bg-secondary mx-auto" />
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="flex gap-6 bg-white p-6 rounded-lg shadow-sm">
+            <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=150&h=150&fit=crop" alt="Nile Perch Sliders" class="w-32 h-32 object-cover rounded-lg flex-shrink-0" />
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-playfair text-xl text-primary">Nile Perch Sliders</h3>
+                <span class="text-secondary font-playfair text-lg">UGX 18,000</span>
+              </div>
+              <p class="text-muted text-sm leading-relaxed">Crispy fried Nile perch patties with mango salsa, pickled onions, and peri-peri mayo</p>
+            </div>
+          </div>
+          <div class="flex gap-6 bg-white p-6 rounded-lg shadow-sm">
+            <img src="https://images.unsplash.com/photo-1601050690117-94f5f7a65c39?w=150&h=150&fit=crop" alt="Samosa Platter" class="w-32 h-32 object-cover rounded-lg flex-shrink-0" />
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-playfair text-xl text-primary">Samosa Platter</h3>
+                <span class="text-secondary font-playfair text-lg">UGX 12,000</span>
+              </div>
+              <p class="text-muted text-sm leading-relaxed">Four golden samosas filled with spiced beef and vegetables, served with tamarind chutney</p>
+            </div>
+          </div>
+          <div class="flex gap-6 bg-white p-6 rounded-lg shadow-sm">
+            <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=150&h=150&fit=crop" alt="Groundnut Soup" class="w-32 h-32 object-cover rounded-lg flex-shrink-0" />
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-playfair text-xl text-primary">Groundnut Soup</h3>
+                <span class="text-secondary font-playfair text-lg">UGX 14,000</span>
+              </div>
+              <p class="text-muted text-sm leading-relaxed">Rich peanut soup with chicken, bitter tomatoes, and cassava slices</p>
+            </div>
+          </div>
+          <div class="flex gap-6 bg-white p-6 rounded-lg shadow-sm">
+            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=150&h=150&fit=crop" alt="Kikwax & Greens" class="w-32 h-32 object-cover rounded-lg flex-shrink-0" />
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-playfair text-xl text-primary">Kikwax & Greens</h3>
+                <span class="text-secondary font-playfair text-lg">UGX 10,000</span>
+              </div>
+              <p class="text-muted text-sm leading-relaxed">Traditional collard greens with pumpkin leaves, peanuts, and cassava flour</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="font-playfair text-4xl md:text-5xl text-primary mb-4">Main Courses</h2>
+          <div class="w-16 h-0.5 bg-secondary mx-auto" />
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="flex gap-6 bg-cream p-6 rounded-lg shadow-sm">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=150&h=150&fit=crop" alt="Roasted Goat Leg" class="w-32 h-32 object-cover rounded-lg flex-shrink-0" />
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-playfair text-xl text-primary">Roasted Goat Leg</h3>
+                <span class="text-secondary font-playfair text-lg">UGX 45,000</span>
+              </div>
+              <p class="text-muted text-sm leading-relaxed">Slow-roasted goat leg marinated in grilled banana and rosemary, served with matooke and kachumbari</p>
+            </div>
+          </div>
+          <div class="flex gap-6 bg-cream p-6 rounded-lg shadow-sm">
+            <img src="https://images.unsplash.com/photo-1485921325833-c519f76c4927?w=150&h=150&fit=crop" alt="Tilapia wa Kukaanga" class="w-32 h-32 object-cover rounded-lg flex-shrink-0" />
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-playfair text-xl text-primary">Tilapia wa Kukaanga</h3>
+                <span class="text-secondary font-playfair text-lg">UGX 38,000</span>
+              </div>
+              <p class="text-muted text-sm leading-relaxed">Whole grilled tilapia from Lake Victoria with groundnut sauce, plantain, and fresh vegetables</p>
+            </div>
+          </div>
+          <div class="flex gap-6 bg-cream p-6 rounded-lg shadow-sm">
+            <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=150&h=150&fit=crop" alt="Chicken Piri-Piri" class="w-32 h-32 object-cover rounded-lg flex-shrink-0" />
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-playfair text-xl text-primary">Chicken Piri-Piri</h3>
+                <span class="text-secondary font-playfair text-lg">UGX 28,000</span>
+              </div>
+              <p class="text-muted text-sm leading-relaxed">Grilled chicken quarters marinated in African bird's eye chili, lemon, and local spices</p>
+            </div>
+          </div>
+          <div class="flex gap-6 bg-cream p-6 rounded-lg shadow-sm">
+            <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=150&h=150&fit=crop" alt="Ebiebe" class="w-32 h-32 object-cover rounded-lg flex-shrink-0" />
+            <div>
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-playfair text-xl text-primary">Ebiebe (Bean Stew)</h3>
+                <span class="text-secondary font-playfair text-lg">UGX 22,000</span>
+              </div>
+              <p class="text-muted text-sm leading-relaxed">Slow-cooked black-eyed peas with plantain, sweet potato, and spinach in coconut broth</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32 bg-cream">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="font-playfair text-4xl md:text-5xl text-primary mb-4">Desserts</h2>
+          <div class="w-16 h-0.5 bg-secondary mx-auto" />
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+            <img src="https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?w=300&h=200&fit=crop" alt="Lugah" class="w-full h-40 object-cover rounded-lg mb-4" />
+            <h3 class="font-playfair text-lg text-primary mb-2">Lugah</h3>
+            <p class="text-muted text-sm mb-3">Caramelized steamed sweet potatoes with coconut cream</p>
+            <span class="text-secondary font-playfair">UGX 8,000</span>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=300&h=200&fit=crop" alt="Gonja B联e" class="w-full h-40 object-cover rounded-lg mb-4" />
+            <h3 class="font-playfair text-lg text-primary mb-2">Gonja B联e</h3>
+            <p class="text-muted text-sm mb-3">Ripe grilled plantain with vanilla ice cream</p>
+            <span class="text-secondary font-playfair">UGX 10,000</span>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+            <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=300&h=200&fit=crop" alt="Tropical Fruit Platter" class="w-full h-40 object-cover rounded-lg mb-4" />
+            <h3 class="font-playfair text-lg text-primary mb-2">Tropical Fruit Platter</h3>
+            <p class="text-muted text-sm mb-3">Seasonal ugandan fruits with honey drizzle</p>
+            <span class="text-secondary font-playfair">UGX 12,000</span>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=300&h=200&fit=crop" alt="Chapati & Bean Paste" class="w-full h-40 object-cover rounded-lg mb-4" />
+            <h3 class="font-playfair text-lg text-primary mb-2">Chapati & Bean Paste</h3>
+            <p class="text-muted text-sm mb-3">Warm chapatis with sweet red bean paste</p>
+            <span class="text-secondary font-playfair">UGX 8,000</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="font-playfair text-4xl md:text-5xl text-primary mb-4">Drinks</h2>
+          <div class="w-16 h-0.5 bg-secondary mx-auto" />
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-cream p-6 rounded-lg shadow-sm text-center">
+            <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=300&h=200&fit=crop" alt="Waragi Cocktail" class="w-full h-40 object-cover rounded-lg mb-4" />
+            <h3 class="font-playfair text-lg text-primary mb-2">Waragi Cocktail</h3>
+            <p class="text-muted text-sm mb-3">Local gin with hibiscus syrup, lime, and sparkling water</p>
+            <span class="text-secondary font-playfair">UGX 12,000</span>
+          </div>
+          <div class="bg-cream p-6 rounded-lg shadow-sm text-center">
+            <img src="https://images.unsplash.com/photo-1550507992-eb63ffee0847?w=300&h=200&fit=crop" alt="Fresh Sugar Cane" class="w-full h-40 object-cover rounded-lg mb-4" />
+            <h3 class="font-playfair text-lg text-primary mb-2">Fresh Sugar Cane</h3>
+            <p class="text-muted text-sm mb-3">Freshly pressed with ginger and lime</p>
+            <span class="text-secondary font-playfair">UGX 6,000</span>
+          </div>
+          <div class="bg-cream p-6 rounded-lg shadow-sm text-center">
+            <img src="https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=300&h=200&fit=crop" alt="Vitality Smoothie" class="w-full h-40 object-cover rounded-lg mb-4" />
+            <h3 class="font-playfair text-lg text-primary mb-2">Vitality Smoothie</h3>
+            <p class="text-muted text-sm mb-3">Avocado, mango, passion fruit, and local honey</p>
+            <span class="text-secondary font-playfair">UGX 8,000</span>
+          </div>
+          <div class="bg-cream p-6 rounded-lg shadow-sm text-center">
+            <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=300&h=200&fit=crop" alt="Bell Water" class="w-full h-40 object-cover rounded-lg mb-4" />
+            <h3 class="font-playfair text-lg text-primary mb-2">Bell Water</h3>
+            <p class="text-muted text-sm mb-3">Traditional millet porridge with a modern twist</p>
+            <span class="text-secondary font-playfair">UGX 5,000</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-secondary">
+      <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+        <h2 class="font-playfair text-4xl text-primary mb-6">Ready to Order?</h2>
+        <p class="text-primary/80 text-lg mb-8">Reserve your table and experience our full menu today.</p>
+        <a href="reservation.html" class="inline-block bg-primary text-cream px-8 py-4 text-sm tracking-wider uppercase font-medium hover:bg-primary/90 transition-colors duration-300">Make a Reservation</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-primary pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div>
+          <div class="mb-6"><span class="font-playfair text-2xl font-semibold text-secondary">uganda</span><span class="font-playfair text-2xl text-cream ml-1">RESTAURANT</span></div>
+          <p class="text-cream/60 text-sm">Experience the authentic flavors of Uganda in the heart of Kampala.</p>
+        </div>
+        <div>
+          <h4 class="text-cream font-medium mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="text-cream/60 hover:text-secondary">Home</a></li>
+            <li><a href="about.html" class="text-cream/60 hover:text-secondary">About</a></li>
+            <li><a href="menu.html" class="text-cream/60 hover:text-secondary">Menu</a></li>
+            <li><a href="contact.html" class="text-cream/60 hover:text-secondary">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-cream font-medium mb-4 text-sm uppercase tracking-wider">Hours</h4>
+          <ul class="space-y-2 text-sm text-cream/60">
+            <li>Mon - Sun: 8AM - 10PM</li>
+            <li>Happy Hour: 4PM - 7PM</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-cream font-medium mb-4 text-sm uppercase tracking-wider">Contact</h4>
+          <ul class="space-y-2 text-sm text-cream/60">
+            <li>Plot 42, Kampala Road</li>
+            <li>+256 414 123 456</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-cream/10 pt-8 text-center">
+        <p class="text-cream/40 text-sm">© 2024 uganda Restaurant. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

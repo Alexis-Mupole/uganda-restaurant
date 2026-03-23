@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | uganda RESTAURANT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1a1a1a',
+            secondary: '#c9a962',
+            accent: '#8b4513',
+            cream: '#faf7f2',
+            dark: '#0d0d0d',
+            muted: '#6b6b6b'
+          },
+          fontFamily: {
+            playfair: ['Playfair Display', 'serif'],
+            inter: ['Inter', 'sans-serif'],
+            cormorant: ['Cormorant Garamond', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+    .font-playfair { font-family: 'Playfair Display', serif; }
+    .font-cormorant { font-family: 'Cormorant Garamond', serif; }
+  </style>
+</head>
+<body class="bg-cream text-primary">
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center">
+          <span class="font-playfair text-2xl font-semibold text-secondary tracking-wide">uganda</span>
+          <span class="font-playfair text-2xl text-cream ml-2">RESTAURANT</span>
+        </a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-cream/90 hover:text-secondary transition-colors duration-300 text-sm tracking-wider uppercase">Home</a>
+          <a href="about.html" class="text-secondary font-medium text-sm tracking-wider uppercase">About</a>
+          <a href="menu.html" class="text-cream/90 hover:text-secondary transition-colors duration-300 text-sm tracking-wider uppercase">Menu</a>
+          <a href="gallery.html" class="text-cream/90 hover:text-secondary transition-colors duration-300 text-sm tracking-wider uppercase">Gallery</a>
+          <a href="contact.html" class="text-cream/90 hover:text-secondary transition-colors duration-300 text-sm tracking-wider uppercase">Contact</a>
+          <a href="reservation.html" class="bg-secondary text-primary px-6 py-2.5 text-sm tracking-wider uppercase hover:bg-secondary/90 transition-colors duration-300">Reserve</a>
+        </div>
+        <a href="reservation.html" class="md:hidden bg-secondary text-primary px-4 py-2 text-xs tracking-wider uppercase">Reserve</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-20">
+    <section class="relative py-20 lg:py-32 bg-primary">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+        <p class="text-secondary tracking-[0.2em] uppercase text-sm mb-4">Our Story</p>
+        <h1 class="font-playfair text-5xl md:text-6xl text-cream mb-6">About Uganda Restaurant</h1>
+        <p class="font-cormorant text-cream/70 text-xl italic max-w-2xl mx-auto">Bringing the authentic tastes of Uganda to your table since 2018</p>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32 bg-cream">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div>
+            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600&h=700&fit=crop" alt="Chef Robert" class="w-full h-[500px] object-cover" />
+          </div>
+          <div>
+            <h2 class="font-playfair text-4xl text-primary mb-6">Our <span class="text-secondary">Beginning</span></h2>
+            <div class="space-y-6 text-muted leading-relaxed">
+              <p>uganda RESTAURANT was founded in 2018 by Grace Namara, a passionate cook from Lira who grew up learning traditional recipes from her grandmother. Her dream was to share Uganda's rich culinary heritage with the world, starting with Kampala.</p>
+              <p>What started as a small eatery with just 20 seats has grown into one of Kampala's most beloved restaurants, welcoming over 25,000 guests who come to experience authentic Ugandan flavors in a warm, inviting atmosphere.</p>
+              <p>Today, under the guidance of Head Chef Robert Sseguya, we continue to honor traditional recipes while adding modern twists. Chef Robert brings 15 years of experience in East African cuisine, having worked in renowned kitchens across Kenya, Tanzania, and Rwanda before joining our family.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <p class="text-secondary tracking-[0.2em] uppercase text-sm mb-3">Meet Our Chef</p>
+          <h2 class="font-playfair text-4xl md:text-5xl text-primary mb-8">Chef Robert Sseguya</h2>
+          <div class="w-16 h-0.5 bg-secondary mx-auto" />
+        </div>
+        <div class="max-w-3xl mx-auto text-center">
+          <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&h=400&fit=crop" alt="Chef Robert" class="w-40 h-40 rounded-full mx-auto mb-8 object-cover" />
+          <blockquote class="font-cormorant text-2xl italic text-primary mb-6">"Food is our love language. When we cook with passion, our guests taste it in every bite."</blockquote>
+          <p class="text-muted leading-relaxed mb-8">Chef Robert Sseguya has been crafting exceptional Ugandan cuisine for over 15 years. Born in Masaka, he began his culinary journey at a young age, helping his mother prepare family meals. His talent was spotted early, leading him to train at the Uganda Hotel and Tourism Institute.</p>
+          <p class="text-muted leading-relaxed">After gaining experience in prestigious kitchens across East Africa, Chef Robert joined uganda RESTAURANT in 2019. His signature style blends traditional Ugandan cooking techniques with contemporary presentation, creating dishes that honor our heritage while exciting the modern palate.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-32 bg-cream">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <p class="text-secondary tracking-[0.2em] uppercase text-sm mb-3">Our Values</p>
+          <h2 class="font-playfair text-4xl md:text-5xl text-primary mb-8">What We Stand For</h2>
+          <div class="w-16 h-0.5 bg-secondary mx-auto" />
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-lg shadow-sm text-center">
+            <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
+            </div>
+            <h3 class="font-playfair text-xl text-primary mb-4">Local Sourcing</h3>
+            <p class="text-muted text-sm leading-relaxed">We source our ingredients from local farmers across Uganda - from the fresh fish of Lake Victoria to the matooke from Mount Elgon region.</p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-sm text-center">
+            <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+            </div>
+            <h3 class="font-playfair text-xl text-primary mb-4">Made with Love</h3>
+            <p class="text-muted text-sm leading-relaxed">Every dish is prepared with care and passion. We believe that food cooked with love tastes better and brings people together.</p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-sm text-center">
+            <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="font-playfair text-xl text-primary mb-4">Tradition & Innovation</h3>
+            <p class="text-muted text-sm leading-relaxed">We honor traditional recipes while embracing modern cooking techniques to create a unique dining experience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-secondary">
+      <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+        <h2 class="font-playfair text-4xl text-primary mb-6">Ready to Experience Uganda?</h2>
+        <p class="text-primary/80 text-lg mb-8">Book your table now and taste the authentic flavors of Uganda.</p>
+        <a href="reservation.html" class="inline-block bg-primary text-cream px-8 py-4 text-sm tracking-wider uppercase font-medium hover:bg-primary/90 transition-colors duration-300">Make a Reservation</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-primary pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div>
+          <div class="mb-6"><span class="font-playfair text-2xl font-semibold text-secondary">uganda</span><span class="font-playfair text-2xl text-cream ml-1">RESTAURANT</span></div>
+          <p class="text-cream/60 text-sm leading-relaxed mb-6">Experience the authentic flavors of Uganda in the heart of Kampala.</p>
+        </div>
+        <div>
+          <h4 class="text-cream font-medium mb-6 tracking-wider uppercase text-sm">Quick Links</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="index.html" class="text-cream/60 hover:text-secondary transition-colors duration-300">Home</a></li>
+            <li><a href="about.html" class="text-cream/60 hover:text-secondary transition-colors duration-300">About</a></li>
+            <li><a href="menu.html" class="text-cream/60 hover:text-secondary transition-colors duration-300">Menu</a></li>
+            <li><a href="gallery.html" class="text-cream/60 hover:text-secondary transition-colors duration-300">Gallery</a></li>
+            <li><a href="contact.html" class="text-cream/60 hover:text-secondary transition-colors duration-300">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-cream font-medium mb-6 tracking-wider uppercase text-sm">Hours</h4>
+          <ul class="space-y-3 text-sm text-cream/60">
+            <li>Monday - Sunday</li>
+            <li>8:00 AM - 10:00 PM</li>
+            <li>Happy Hour: 4PM - 7PM</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-cream font-medium mb-6 tracking-wider uppercase text-sm">Contact</h4>
+          <ul class="space-y-3 text-sm text-cream/60">
+            <li>Plot 42, Kampala Road</li>
+            <li>Kampala, Uganda</li>
+            <li>+256 414 123 456</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-cream/10 pt-8 text-center">
+        <p class="text-cream/40 text-sm">© 2024 uganda Restaurant. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
