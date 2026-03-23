@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Assets | uganda RESTAURANT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-header {
+      padding: 6rem 1rem 4rem;
+      background-color: var(--primary);
+      text-align: center;
+    }
+    .asset-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 3rem 1rem;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .asset-card {
+      background: white;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    .asset-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+    .asset-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .asset-info {
+      padding: 1rem;
+    }
+    .asset-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .asset-category {
+      font-size: 0.75rem;
+      color: var(--secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+    .asset-url {
+      font-size: 0.75rem;
+      color: var(--muted);
+      word-break: break-all;
+      background: var(--cream);
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+      font-family: monospace;
+    }
+    .copy-btn {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--secondary);
+      color: var(--primary);
+      font-size: 0.75rem;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .copy-btn:hover {
+      background: #b8984f;
+    }
+    .section-divider {
+      width: 60px;
+      height: 3px;
+      background: var(--secondary);
+      margin: 1rem auto 0;
+    }
+    .stats-bar {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      padding: 2rem;
+      background: var(--cream);
+      flex-wrap: wrap;
+    }
+    .stat-item {
+      text-align: center;
+    }
+    .stat-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--secondary);
+    }
+    .stat-label {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="index.html" class="flex items-center">
+          <span class="nav-logo">uganda</span>
+          <span class="nav-logo-secondary">RESTAURANT</span>
+        </a>
+        
+        <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="gallery.html" class="nav-link">Gallery</a>
+          <a href="assets.html" class="nav-link active">Assets</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="reservation.html" class="nav-btn">Reserve</a>
+        </div>
+
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-cream">
+          <svg class="w-6 h-6 menu-open" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg class="w-6 h-6 menu-close hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu hidden lg:hidden">
+      <div class="px-4 py-6 space-y-4">
+        <a href="index.html" class="mobile-menu-link">Home</a>
+        <a href="about.html" class="mobile-menu-link">About</a>
+        <a href="menu.html" class="mobile-menu-link">Menu</a>
+        <a href="gallery.html" class="mobile-menu-link">Gallery</a>
+        <a href="assets.html" class="mobile-menu-link active">Assets</a>
+        <a href="contact.html" class="mobile-menu-link">Contact</a>
+        <a href="reservation.html" class="mobile-menu-btn">Reserve a Table</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <p class="section-subtitle">Media Resources</p>
+    <h1 class="section-title section-title-light">Our Assets</h1>
+    <div class="section-divider"></div>
+    <p class="section-text" style="color: rgba(250,247,242,0.7); max-width: 600px; margin: 1rem auto 0;">
+      Browse all images and media assets used throughout our website
+    </p>
+  </header>
+
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-value" id="totalImages">0</div>
+      <div class="stat-label">Total Images</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value" id="categories">0</div>
+      <div class="stat-label">Categories</div>
+    </div>
+  </div>
+
+  <div class="asset-grid" id="assetGrid"></div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div>
+            <span class="footer-logo">uganda</span>
+            <span class="footer-logo-secondary">RESTAURANT</span>
+          </div>
+          <p class="footer-text">Experience the authentic flavors of Uganda in the heart of Kampala.</p>
+          <div class="social-links">
+            <a href="#" class="social-link">
+              <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0z"/></svg>
+            </a>
+            <a href="#" class="social-link">
+              <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" class="social-link">
+              <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Hours</h4>
+          <ul class="footer-links">
+            <li>Mon - Sun: 8AM - 10PM</li>
+            <li>Happy Hour: 4PM - 7PM</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-links">
+            <li>Plot 42, Kampala Road</li>
+            <li>Kampala, Uganda</li>
+            <li>+256 414 123 456</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2024 uganda Restaurant. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    const assets = [
+      // Hero & Interior
+      { name: "Restaurant Interior", url: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1920&h=1080&fit=crop", category: "Hero" },
+      { name: "Main Dining Area", url: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop", category: "Interior" },
+      { name: "Bar Area", url: "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&h=300&fit=crop", category: "Interior" },
+      
+      // Food - Mains
+      { name: "Roasted Goat Leg", url: "https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop", category: "Main Courses" },
+      { name: "Grilled Tilapia", url: "https://images.unsplash.com/photo-1485921325833-c519f76c4927?w=400&h=300&fit=crop", category: "Main Courses" },
+      { name: "Chicken Piri-Piri", url: "https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=400&h=300&fit=crop", category: "Main Courses" },
+      { name: "Nile Perch Fish", url: "https://images.unsplash.com/photo-1559847844-5315695dadae?w=400&h=300&fit=crop", category: "Main Courses" },
+      
+      // Food - General
+      { name: "Signature Dish Plating", url: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=300&fit=crop", category: "Food" },
+      { name: "Fresh Fruits", url: "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400&h=300&fit=crop", category: "Food" },
+      
+      // Starters
+      { name: "Samosas", url: "https://images.unsplash.com/photo-1601050690117-94f5f7a65c39?w=400&h=300&fit=crop", category: "Starters" },
+      { name: "Groundnut Soup", url: "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&h=300&fit=crop", category: "Starters" },
+      { name: "Kikwax Greens", url: "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&h=300&fit=crop", category: "Starters" },
+      
+      // Desserts
+      { name: "Lugah Sweet Potatoes", url: "https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?w=400&h=300&fit=crop", category: "Desserts" },
+      { name: "Gonja Plantain", url: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&h=300&fit=crop", category: "Desserts" },
+      { name: "Tropical Fruits", url: "https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=400&h=300&fit=crop", category: "Desserts" },
+      { name: "Dessert Plating", url: "https://images.unsplash.com/photo-1428515613728-6b4607e44363?w=400&h=300&fit=crop", category: "Desserts" },
+      
+      // Drinks
+      { name: "Waragi Cocktail", url: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400&h=300&fit=crop", category: "Drinks" },
+      { name: "Sugar Cane Juice", url: "https://images.unsplash.com/photo-1550507992-eb63ffee0847?w=400&h=300&fit=crop", category: "Drinks" },
+      { name: "Vitality Smoothie", url: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=400&h=300&fit=crop", category: "Drinks" },
+      { name: "Bell Water", url: "https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400&h=300&fit=crop", category: "Drinks" },
+      
+      // Team
+      { name: "Chef Robert", url: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400&h=400&fit=crop", category: "Team" },
+      { name: "Kitchen Team", url: "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&h=400&fit=crop", category: "Team" },
+      { name: "Chef at Work", url: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=400&h=300&fit=crop", category: "Team" }
+    ];
+
+    const grid = document.getElementById('assetGrid');
+    const totalImages = document.getElementById('totalImages');
+    const categoriesCount = document.getElementById('categories');
+
+    // Count unique categories
+    const uniqueCategories = [...new Set(assets.map(a => a.category))];
+    totalImages.textContent = assets.length;
+    categoriesCount.textContent = uniqueCategories.length;
+
+    assets.forEach(asset => {
+      const card = document.createElement('div');
+      card.className = 'asset-card';
+      card.innerHTML = `
+        <img src="${asset.url}" alt="${asset.name}" class="asset-img" loading="lazy">
+        <div class="asset-info">
+          <p class="asset-category">${asset.category}</p>
+          <h3 class="asset-name">${asset.name}</h3>
+          <p class="asset-url">${asset.url}</p>
+          <button class="copy-btn" onclick="copyUrl('${asset.url}')">Copy URL</button>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+
+    function copyUrl(url) {
+      navigator.clipboard.writeText(url).then(() => {
+        alert('URL copied to clipboard!');
+      });
+    }
+  </script>
+</body>
+</html>

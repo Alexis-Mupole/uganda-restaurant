@@ -5,64 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>uganda RESTAURANT | Authentic Ugandan Cuisine</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#1a1a1a',
-            secondary: '#c9a962',
-            accent: '#8b4513',
-            cream: '#faf7f2',
-            dark: '#0d0d0d',
-            muted: '#6b6b6b'
-          },
-          fontFamily: {
-            playfair: ['Playfair Display', 'serif'],
-            inter: ['Inter', 'sans-serif'],
-            cormorant: ['Cormorant Garamond', 'serif']
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; }
-    .font-playfair { font-family: 'Playfair Display', serif; }
-    .font-cormorant { font-family: 'Cormorant Garamond', serif; }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .animate-fade-in { animation: fadeIn 0.8s ease-out forwards; }
-    .animate-slide-up { animation: slideUp 0.8s ease-out forwards; }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-cream text-primary">
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
       <div class="flex items-center justify-between h-16 md:h-20">
         <a href="index.html" class="flex items-center">
-          <span class="font-playfair text-lg sm:text-xl md:text-2xl font-semibold text-secondary tracking-wide">uganda</span>
-          <span class="font-playfair text-lg sm:text-xl md:text-2xl text-cream ml-1 md:ml-2">RESTAURANT</span>
+          <span class="nav-logo">uganda</span>
+          <span class="nav-logo-secondary">RESTAURANT</span>
         </a>
         
         <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
-          <a href="index.html" class="text-secondary font-medium text-xs xl:text-sm tracking-wider uppercase">Home</a>
-          <a href="about.html" class="text-cream/90 hover:text-secondary transition-colors duration-300 text-xs xl:text-sm tracking-wider uppercase">About</a>
-          <a href="menu.html" class="text-cream/90 hover:text-secondary transition-colors duration-300 text-xs xl:text-sm tracking-wider uppercase">Menu</a>
-          <a href="gallery.html" class="text-cream/90 hover:text-secondary transition-colors duration-300 text-xs xl:text-sm tracking-wider uppercase">Gallery</a>
-          <a href="contact.html" class="text-cream/90 hover:text-secondary transition-colors duration-300 text-xs xl:text-sm tracking-wider uppercase">Contact</a>
-          <a href="reservation.html" class="bg-secondary text-primary px-4 xl:px-6 py-2 xl:py-2.5 text-xs xl:text-sm tracking-wider uppercase hover:bg-secondary/90 transition-colors duration-300">Reserve</a>
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="gallery.html" class="nav-link">Gallery</a>
+          <a href="assets.html" class="nav-link">Assets</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="reservation.html" class="nav-btn">Reserve</a>
         </div>
 
-        <button id="mobile-menu-btn" class="lg:hidden p-2 text-cream hover:text-secondary transition-colors">
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-cream">
           <svg class="w-6 h-6 menu-open" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
@@ -73,242 +38,221 @@
       </div>
     </div>
 
-    <div id="mobile-menu" class="lg:hidden hidden bg-primary/98 backdrop-blur-lg">
-      <div class="px-4 py-6 space-y-4 border-t border-cream/10">
-        <a href="index.html" class="block text-secondary font-medium text-sm tracking-wider uppercase py-2">Home</a>
-        <a href="about.html" class="block text-cream/90 hover:text-secondary transition-colors text-sm tracking-wider uppercase py-2">About</a>
-        <a href="menu.html" class="block text-cream/90 hover:text-secondary transition-colors text-sm tracking-wider uppercase py-2">Menu</a>
-        <a href="gallery.html" class="block text-cream/90 hover:text-secondary transition-colors text-sm tracking-wider uppercase py-2">Gallery</a>
-        <a href="contact.html" class="block text-cream/90 hover:text-secondary transition-colors text-sm tracking-wider uppercase py-2">Contact</a>
-        <a href="reservation.html" class="block bg-secondary text-primary px-6 py-3 text-sm tracking-wider uppercase text-center hover:bg-secondary/90 transition-colors">Reserve a Table</a>
+    <div id="mobile-menu" class="mobile-menu hidden lg:hidden">
+      <div class="px-4 py-6 space-y-4">
+        <a href="index.html" class="mobile-menu-link active">Home</a>
+        <a href="about.html" class="mobile-menu-link">About</a>
+        <a href="menu.html" class="mobile-menu-link">Menu</a>
+        <a href="gallery.html" class="mobile-menu-link">Gallery</a>
+        <a href="assets.html" class="mobile-menu-link">Assets</a>
+        <a href="contact.html" class="mobile-menu-link">Contact</a>
+        <a href="reservation.html" class="mobile-menu-btn">Reserve a Table</a>
       </div>
     </div>
   </nav>
 
-  <main>
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1920&h=1080&fit=crop')">
-        <div class="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/50 to-primary/80" />
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1920&h=1080&fit=crop')"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-subtitle animate-fade-in">Welcome to</p>
+      <h1 class="hero-title animate-slide-up" style="animation-delay: 0.15s">uganda RESTAURANT</h1>
+      <p class="hero-description animate-slide-up" style="animation-delay: 0.3s">
+        Authentic Ugandan Cuisine in the Heart of Kampala
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 animate-slide-up" style="animation-delay: 0.5s">
+        <a href="reservation.html" class="hero-btn hero-btn-primary">Reserve a Table</a>
+        <a href="menu.html" class="hero-btn hero-btn-outline">View Menu</a>
       </div>
-      <div class="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
-        <p class="font-cormorant text-secondary text-lg sm:text-xl md:text-2xl tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4 animate-fade-in">Welcome to</p>
-        <h1 class="font-playfair text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-cream font-semibold mb-4 sm:mb-6 animate-slide-up" style="animation-delay: 0.15s">uganda RESTAURANT</h1>
-        <p class="font-cormorant text-cream/80 text-base sm:text-lg md:text-xl lg:text-2xl italic mb-8 sm:mb-12 max-w-2xl mx-auto animate-slide-up" style="animation-delay: 0.3s">
-          Authentic Ugandan Cuisine in the Heart of Kampala
-        </p>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 animate-slide-up" style="animation-delay: 0.5s">
-          <a href="reservation.html" class="bg-secondary text-primary px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm tracking-wider uppercase font-medium hover:bg-secondary/90 transition-all duration-300 hover:scale-105 w-full sm:w-auto">
-            Reserve a Table
-          </a>
-          <a href="menu.html" class="border border-cream/40 text-cream px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm tracking-wider uppercase font-medium hover:border-secondary hover:text-secondary transition-all duration-300 w-full sm:w-auto">
-            View Menu
-          </a>
-        </div>
-      </div>
-      <a href="#about" class="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 text-cream/60 hover:text-secondary animate-fade-in" style="animation-delay: 0.7s">
-        <svg class="w-6 sm:w-8 h-6 sm:h-8 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-      </a>
-    </section>
+    </div>
+    <a href="#about" class="absolute bottom-8 left-1/2 -translate-x-1/2 text-cream/60 hover:text-secondary animate-fade-in" style="animation-delay: 0.7s; color: rgba(250,247,242,0.6);">
+      <svg class="w-8 h-8 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    </a>
+  </section>
 
-    <section id="about" class="py-16 sm:py-20 lg:py-32 bg-cream">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12 sm:mb-16">
-          <p class="text-secondary tracking-[0.2em] uppercase text-xs sm:text-sm mb-3">Our Story</p>
-          <h2 class="font-playfair text-3xl sm:text-4xl md:text-5xl text-primary mb-6 sm:mb-8 leading-tight">
-            Taste the Spirit of <span class="text-secondary">Uganda</span>
-          </h2>
-          <div class="w-12 sm:w-16 h-0.5 bg-secondary mx-auto" />
+  <!-- About Preview -->
+  <section id="about" class="section section-bg-cream">
+    <div class="section-container">
+      <div class="text-center mb-12 sm:mb-16">
+        <p class="section-subtitle">Our Story</p>
+        <h2 class="section-title">Taste the Spirit of <span class="text-secondary">Uganda</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="grid-2 items-center">
+        <div>
+          <div class="space-y-4 sm:space-y-6 text-muted" style="color: var(--muted);">
+            <p>Founded in 2018, uganda RESTAURANT was born from a passion to share Uganda's rich culinary heritage with the world. Our founder, Grace Namara, grew up learning traditional recipes from her grandmother in Lira.</p>
+            <p>Today, under the guidance of Head Chef Robert Sseguya, we continue this tradition. With 15 years of experience in East African cuisine, Chef Robert has mastered the art of balancing traditional flavors with modern presentation.</p>
+            <p>We source our ingredients from local farmers across Uganda - from the fresh fish of Lake Victoria to the matooke from Mount Elgon region.</p>
+          </div>
+          <div class="mt-6 sm:mt-8">
+            <a href="about.html" class="btn btn-primary">Learn More About Us</a>
+          </div>
         </div>
-        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-20 items-center">
+        <div class="relative">
+          <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600&h=700&fit=crop" alt="Chef Robert Sseguya" style="width: 100%; height: 400px; object-fit: cover;" />
+          <div style="position: absolute; bottom: -1rem; left: -1rem; background: var(--secondary); padding: 1.5rem; max-width: 200px;">
+            <p style="font-family: 'Playfair Display', serif; color: var(--primary); font-style: italic; font-size: 1rem; margin-bottom: 0.5rem;">"Food is our love language"</p>
+            <p style="color: rgba(26,26,26,0.7); font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase;">— Chef Robert Sseguya</p>
+          </div>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <p class="stat-number">6+</p>
+          <p class="stat-label">Years of Excellence</p>
+        </div>
+        <div class="stat">
+          <p class="stat-number">25k+</p>
+          <p class="stat-label">Happy Guests</p>
+        </div>
+        <div class="stat">
+          <p class="stat-number">8+</p>
+          <p class="stat-label">Awards Won</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Preview -->
+  <section class="section section-bg-primary">
+    <div class="section-container">
+      <div class="text-center mb-12 sm:mb-16">
+        <p class="section-subtitle">Our Menu</p>
+        <h2 class="section-title section-title-light">Authentic Flavors</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="grid-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop" alt="Roasted Goat" class="card-img" />
+          <div class="card-body">
+            <h3 class="card-title">Roasted Goat Leg</h3>
+            <p class="card-text">Slow-roasted with grilled banana and rosemary</p>
+            <p class="card-price">UGX 45,000</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1485921325833-c519f76c4927?w=400&h=300&fit=crop" alt="Tilapia" class="card-img" />
+          <div class="card-body">
+            <h3 class="card-title">Tilapia wa Kukaanga</h3>
+            <p class="card-text">Grilled tilapia with groundnut sauce</p>
+            <p class="card-price">UGX 38,000</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=400&h=300&fit=crop" alt="Chicken" class="card-img" />
+          <div class="card-body">
+            <h3 class="card-title">Chicken Piri-Piri</h3>
+            <p class="card-text">Grilled chicken with bird's eye chili</p>
+            <p class="card-price">UGX 28,000</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=400&h=300&fit=crop" alt="Nile Perch" class="card-img" />
+          <div class="card-body">
+            <h3 class="card-title">Nile Perch Sliders</h3>
+            <p class="card-text">Crispy fish with mango salsa</p>
+            <p class="card-price">UGX 18,000</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-8 sm:mt-12">
+        <a href="menu.html" class="btn btn-secondary">View Full Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Preview -->
+  <section class="section section-bg-cream">
+    <div class="section-container">
+      <div class="text-center mb-12 sm:mb-16">
+        <p class="section-subtitle">Gallery</p>
+        <h2 class="section-title">Our Restaurant</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop" alt="Interior" class="gallery-img" /><div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=300&fit=crop" alt="Food" class="gallery-img" /><div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&h=300&fit=crop" alt="Bar" class="gallery-img" /><div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=400&h=300&fit=crop" alt="Fish" class="gallery-img" /><div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=400&h=300&fit=crop" alt="Chef" class="gallery-img" /><div class="gallery-overlay"><span class="gallery-overlay-text">View</span></div></div>
+      </div>
+      <div class="text-center mt-8 sm:mt-12">
+        <a href="gallery.html" class="btn btn-primary">View Full Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section section-bg-secondary">
+    <div class="section-container" style="max-width: 800px;">
+      <div class="text-center">
+        <h2 class="section-title">Make a Reservation</h2>
+        <p style="color: rgba(26,26,26,0.8); font-size: 1.125rem; margin-bottom: 2rem;">Reserve your table for an unforgettable dining experience with authentic Ugandan cuisine.</p>
+        <a href="reservation.html" class="btn btn-primary">Book Your Table</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
           <div>
-            <div class="space-y-4 sm:space-y-6 text-muted leading-relaxed text-sm sm:text-base">
-              <p>Founded in 2018, uganda RESTAURANT was born from a passion to share Uganda's rich culinary heritage with the world. Our founder, Grace Namara, grew up learning traditional recipes from her grandmother in Lira and dreamed of bringing authentic Ugandan flavors to Kampala.</p>
-              <p>Today, under the guidance of Head Chef Robert Sseguya, we continue this tradition. With 15 years of experience in East African cuisine, Chef Robert has mastered the art of balancing traditional flavors with modern presentation.</p>
-              <p>We source our ingredients from local farmers across Uganda - from the fresh fish of Lake Victoria to the matooke from Mount Elgon. Every dish tells the story of our beautiful country.</p>
-            </div>
-            <div class="mt-6 sm:mt-8">
-              <a href="about.html" class="inline-block bg-primary text-cream px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm tracking-wider uppercase hover:bg-primary/90 transition-colors duration-300">Learn More About Us</a>
-            </div>
+            <span class="footer-logo">uganda</span>
+            <span class="footer-logo-secondary">RESTAURANT</span>
           </div>
-          <div class="relative mt-8 lg:mt-0">
-            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600&h=700&fit=crop" alt="Chef Robert Sseguya" class="w-full h-64 sm:h-80 md:h-[500px] object-cover" />
-            <div class="absolute -bottom-4 sm:-bottom-6 -left-4 sm:-left-6 bg-secondary p-4 sm:p-6 max-w-[200px] sm:max-w-xs">
-              <p class="font-playfair text-primary text-base sm:text-xl italic mb-2">"Food is our love language"</p>
-              <p class="text-primary/70 text-xs sm:text-sm tracking-wider uppercase">— Chef Robert Sseguya</p>
-            </div>
-          </div>
-        </div>
-        <div class="grid grid-cols-3 gap-4 sm:gap-8 mt-12 sm:mt-20 pt-12 sm:pt-16 border-t border-primary/10">
-          <div class="text-center">
-            <p class="font-playfair text-3xl sm:text-4xl md:text-5xl text-secondary mb-1 sm:mb-2">6+</p>
-            <p class="text-muted tracking-wider uppercase text-xs sm:text-sm">Years of Excellence</p>
-          </div>
-          <div class="text-center">
-            <p class="font-playfair text-3xl sm:text-4xl md:text-5xl text-secondary mb-1 sm:mb-2">25k+</p>
-            <p class="text-muted tracking-wider uppercase text-xs sm:text-sm">Happy Guests</p>
-          </div>
-          <div class="text-center">
-            <p class="font-playfair text-3xl sm:text-4xl md:text-5xl text-secondary mb-1 sm:mb-2">8+</p>
-            <p class="text-muted tracking-wider uppercase text-xs sm:text-sm">Awards Won</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-16 sm:py-20 lg:py-32 bg-primary">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12 sm:mb-16">
-          <p class="text-secondary tracking-[0.2em] uppercase text-xs sm:text-sm mb-3">Our Menu</p>
-          <h2 class="font-playfair text-3xl sm:text-4xl md:text-5xl text-cream mb-6 sm:mb-8">Authentic Flavors</h2>
-          <div class="w-12 sm:w-16 h-0.5 bg-secondary mx-auto" />
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          <div class="bg-white rounded-lg overflow-hidden shadow-sm group">
-            <div class="relative h-40 sm:h-48">
-              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop" alt="Roasted Goat" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-            </div>
-            <div class="p-4 sm:p-6">
-              <h3 class="font-playfair text-lg sm:text-xl text-primary mb-1 sm:mb-2">Roasted Goat Leg</h3>
-              <p class="text-muted text-xs sm:text-sm">Slow-roasted with grilled banana and rosemary</p>
-              <p class="text-secondary font-playfair text-lg sm:text-xl mt-2 sm:mt-4">UGX 45,000</p>
-            </div>
-          </div>
-          <div class="bg-white rounded-lg overflow-hidden shadow-sm group">
-            <div class="relative h-40 sm:h-48">
-              <img src="https://images.unsplash.com/photo-1485921325833-c519f76c4927?w=400&h=300&fit=crop" alt="Tilapia" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-            </div>
-            <div class="p-4 sm:p-6">
-              <h3 class="font-playfair text-lg sm:text-xl text-primary mb-1 sm:mb-2">Tilapia wa Kukaanga</h3>
-              <p class="text-muted text-xs sm:text-sm">Grilled tilapia with groundnut sauce</p>
-              <p class="text-secondary font-playfair text-lg sm:text-xl mt-2 sm:mt-4">UGX 38,000</p>
-            </div>
-          </div>
-          <div class="bg-white rounded-lg overflow-hidden shadow-sm group">
-            <div class="relative h-40 sm:h-48">
-              <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=400&h=300&fit=crop" alt="Chicken" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-            </div>
-            <div class="p-4 sm:p-6">
-              <h3 class="font-playfair text-lg sm:text-xl text-primary mb-1 sm:mb-2">Chicken Piri-Piri</h3>
-              <p class="text-muted text-xs sm:text-sm">Grilled chicken with bird's eye chili</p>
-              <p class="text-secondary font-playfair text-lg sm:text-xl mt-2 sm:mt-4">UGX 28,000</p>
-            </div>
-          </div>
-          <div class="bg-white rounded-lg overflow-hidden shadow-sm group">
-            <div class="relative h-40 sm:h-48">
-              <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=400&h=300&fit=crop" alt="Nile Perch" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-            </div>
-            <div class="p-4 sm:p-6">
-              <h3 class="font-playfair text-lg sm:text-xl text-primary mb-1 sm:mb-2">Nile Perch Sliders</h3>
-              <p class="text-muted text-xs sm:text-sm">Crispy fish with mango salsa</p>
-              <p class="text-secondary font-playfair text-lg sm:text-xl mt-2 sm:mt-4">UGX 18,000</p>
-            </div>
-          </div>
-        </div>
-        <div class="text-center mt-8 sm:mt-12">
-          <a href="menu.html" class="inline-block bg-secondary text-primary px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm tracking-wider uppercase font-medium hover:bg-secondary/90 transition-colors duration-300">View Full Menu</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-16 sm:py-20 lg:py-32 bg-cream">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12 sm:mb-16">
-          <p class="text-secondary tracking-[0.2em] uppercase text-xs sm:text-sm mb-3">Gallery</p>
-          <h2 class="font-playfair text-3xl sm:text-4xl md:text-5xl text-primary mb-6 sm:mb-8">Our Restaurant</h2>
-          <div class="w-12 sm:w-16 h-0.5 bg-secondary mx-auto" />
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4">
-          <div class="col-span-2 row-span-2"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop" alt="Interior" class="w-full h-48 md:h-full object-cover rounded-lg" /></div>
-          <div><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=300&fit=crop" alt="Food" class="w-full h-32 sm:h-48 object-cover rounded-lg" /></div>
-          <div><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&h=300&fit=crop" alt="Bar" class="w-full h-32 sm:h-48 object-cover rounded-lg" /></div>
-          <div><img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=400&h=300&fit=crop" alt="Fish" class="w-full h-32 sm:h-48 object-cover rounded-lg" /></div>
-          <div><img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=400&h=300&fit=crop" alt="Chef" class="w-full h-32 sm:h-48 object-cover rounded-lg" /></div>
-        </div>
-        <div class="text-center mt-8 sm:mt-12">
-          <a href="gallery.html" class="inline-block bg-primary text-cream px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm tracking-wider uppercase hover:bg-primary/90 transition-colors duration-300">View Full Gallery</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-16 sm:py-20 lg:py-32 bg-secondary">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="font-playfair text-3xl sm:text-4xl md:text-5xl text-primary mb-4 sm:mb-6">Make a Reservation</h2>
-        <p class="text-primary/80 text-base sm:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto">Reserve your table for an unforgettable dining experience with authentic Ugandan cuisine.</p>
-        <a href="reservation.html" class="inline-block bg-primary text-cream px-6 sm:px-8 py-3 sm:py-4 text-xs sm:text-sm tracking-wider uppercase font-medium hover:bg-primary/90 transition-colors duration-300">Book Your Table</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="bg-primary pt-12 sm:pt-16 pb-6 sm:pb-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-12">
-        <div class="col-span-2 lg:col-span-1">
-          <div class="mb-4 sm:mb-6"><span class="font-playfair text-lg sm:text-xl md:text-2xl font-semibold text-secondary">uganda</span><span class="font-playfair text-lg sm:text-xl md:text-2xl text-cream ml-1">RESTAURANT</span></div>
-          <p class="text-cream/60 text-xs sm:text-sm leading-relaxed">Experience the authentic flavors of Uganda in the heart of Kampala.</p>
-          <div class="flex space-x-3 sm:space-x-4 mt-4 sm:mt-6">
-            <a href="#" class="w-8 sm:w-10 h-8 sm:h-10 bg-cream/10 rounded-full flex items-center justify-center text-cream/60 hover:bg-secondary hover:text-primary transition-all duration-300">
-              <svg class="w-4 sm:w-5 h-4 sm:h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          <p class="footer-text">Experience the authentic flavors of Uganda in the heart of Kampala. Join us for an unforgettable culinary journey.</p>
+          <div class="social-links">
+            <a href="#" class="social-link">
+              <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0z"/></svg>
             </a>
-            <a href="#" class="w-8 sm:w-10 h-8 sm:h-10 bg-cream/10 rounded-full flex items-center justify-center text-cream/60 hover:bg-secondary hover:text-primary transition-all duration-300">
-              <svg class="w-4 sm:w-5 h-4 sm:h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            <a href="#" class="social-link">
+              <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             </a>
-            <a href="#" class="w-8 sm:w-10 h-8 sm:h-10 bg-cream/10 rounded-full flex items-center justify-center text-cream/60 hover:bg-secondary hover:text-primary transition-all duration-300">
-              <svg class="w-4 sm:w-5 h-4 sm:h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <a href="#" class="social-link">
+              <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
           </div>
         </div>
         <div>
-          <h4 class="text-cream font-medium mb-4 sm:mb-6 tracking-wider uppercase text-xs sm:text-sm">Quick Links</h4>
-          <ul class="space-y-2 text-xs sm:text-sm">
-            <li><a href="index.html" class="text-cream/60 hover:text-secondary transition-colors duration-300">Home</a></li>
-            <li><a href="about.html" class="text-cream/60 hover:text-secondary transition-colors duration-300">About</a></li>
-            <li><a href="menu.html" class="text-cream/60 hover:text-secondary transition-colors duration-300">Menu</a></li>
-            <li><a href="gallery.html" class="text-cream/60 hover:text-secondary transition-colors duration-300">Gallery</a></li>
-            <li><a href="contact.html" class="text-cream/60 hover:text-secondary transition-colors duration-300">Contact</a></li>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="assets.html">Assets</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="text-cream font-medium mb-4 sm:mb-6 tracking-wider uppercase text-xs sm:text-sm">Hours</h4>
-          <ul class="space-y-2 text-xs sm:text-sm text-cream/60">
+          <h4 class="footer-title">Hours</h4>
+          <ul class="footer-links">
             <li>Monday - Sunday</li>
             <li>8:00 AM - 10:00 PM</li>
+            <li>Open 7 days a week</li>
             <li>Happy Hour: 4PM - 7PM</li>
           </ul>
         </div>
         <div>
-          <h4 class="text-cream font-medium mb-4 sm:mb-6 tracking-wider uppercase text-xs sm:text-sm">Contact</h4>
-          <ul class="space-y-2 text-xs sm:text-sm text-cream/60">
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-links">
             <li>Plot 42, Kampala Road</li>
             <li>Kampala, Uganda</li>
             <li>+256 414 123 456</li>
+            <li>info@ugandarestaurant.ug</li>
           </ul>
         </div>
       </div>
-      <div class="border-t border-cream/10 pt-6 sm:pt-8 text-center">
-        <p class="text-cream/40 text-xs sm:text-sm">© 2024 uganda Restaurant. All rights reserved.</p>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2024 uganda Restaurant. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-  <script>
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuOpen = mobileMenuBtn.querySelector('.menu-open');
-    const menuClose = mobileMenuBtn.querySelector('.menu-close');
-
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      menuOpen.classList.toggle('hidden');
-      menuClose.classList.toggle('hidden');
-    });
-
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        menuOpen.classList.remove('hidden');
-        menuClose.classList.add('hidden');
-      });
-    });
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
