@@ -5,90 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us | uganda RESTAURANT</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#1a1a1a',
-            secondary: '#c9a962',
-            cream: '#faf7f2',
-            muted: '#6b6b6b'
-          },
-          fontFamily: {
-            playfair: ['Playfair Display', 'serif'],
-            inter: ['Inter', 'sans-serif'],
-            cormorant: ['Cormorant Garamond', 'serif']
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    body { font-family: 'Inter', sans-serif; }
-    .font-playfair { font-family: 'Playfair Display', serif; }
-    .font-cormorant { font-family: 'Cormorant Garamond', serif; }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-cream text-primary">
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16 md:h-20">
-        <a href="index.html" class="flex items-center">
-          <span class="font-playfair text-lg sm:text-xl md:text-2xl font-semibold text-secondary tracking-wide">uganda</span>
-          <span class="font-playfair text-lg sm:text-xl md:text-2xl text-cream ml-1 md:ml-2">RESTAURANT</span>
-        </a>
-        
-        <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
-          <a href="index.html" class="text-cream/90 hover:text-secondary transition-colors duration-300 text-xs xl:text-sm tracking-wider uppercase">Home</a>
-          <a href="about.html" class="text-cream/90 hover:text-secondary transition-colors duration-300 text-xs xl:text-sm tracking-wider uppercase">About</a>
-          <a href="menu.html" class="text-cream/90 hover:text-secondary transition-colors duration-300 text-xs xl:text-sm tracking-wider uppercase">Menu</a>
-          <a href="gallery.html" class="text-cream/90 hover:text-secondary transition-colors duration-300 text-xs xl:text-sm tracking-wider uppercase">Gallery</a>
-          <a href="contact.html" class="text-secondary font-medium text-xs xl:text-sm tracking-wider uppercase">Contact</a>
-          <a href="reservation.html" class="bg-secondary text-primary px-4 xl:px-6 py-2 xl:py-2.5 text-xs xl:text-sm tracking-wider uppercase hover:bg-secondary/90 transition-colors duration-300">Reserve</a>
-        </div>
-
-        <button id="mobile-menu-btn" class="lg:hidden p-2 text-cream hover:text-secondary transition-colors">
-          <svg class="w-6 h-6 menu-open" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-          <svg class="w-6 h-6 menu-close hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-          </svg>
-        </button>
+<body class="section-bg-cream text-primary">
+  <nav class="navbar">
+    <div class="nav-container flex items-center justify-between" style="height: 4rem;">
+      <a href="index.html" class="flex items-center">
+        <span class="nav-logo">uganda</span>
+        <span class="nav-logo nav-logo-secondary">RESTAURANT</span>
+      </a>
+      
+      <div class="hidden lg:flex items-center" style="gap: 1.5rem;">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="reservation.html" class="nav-btn">Reserve</a>
       </div>
+
+      <button id="mobile-menu-btn" class="lg:hidden p-2" style="color: var(--cream);">
+        <svg class="w-6 h-6 menu-open" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg class="w-6 h-6 menu-close hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
     </div>
 
-    <div id="mobile-menu" class="lg:hidden hidden bg-primary/98 backdrop-blur-lg">
-      <div class="px-4 py-6 space-y-4 border-t border-cream/10">
-        <a href="index.html" class="block text-cream/90 hover:text-secondary transition-colors text-sm tracking-wider uppercase py-2">Home</a>
-        <a href="about.html" class="block text-cream/90 hover:text-secondary transition-colors text-sm tracking-wider uppercase py-2">About</a>
-        <a href="menu.html" class="block text-cream/90 hover:text-secondary transition-colors text-sm tracking-wider uppercase py-2">Menu</a>
-        <a href="gallery.html" class="block text-cream/90 hover:text-secondary transition-colors text-sm tracking-wider uppercase py-2">Gallery</a>
-        <a href="contact.html" class="block text-secondary font-medium text-sm tracking-wider uppercase py-2">Contact</a>
-        <a href="reservation.html" class="block bg-secondary text-primary px-6 py-3 text-sm tracking-wider uppercase text-center hover:bg-secondary/90 transition-colors">Reserve a Table</a>
+    <div id="mobile-menu" class="lg:hidden hidden" style="padding: 1.5rem 1rem;">
+      <div style="display: flex; flex-direction: column; gap: 1rem;">
+        <a href="index.html" class="mobile-menu-link">Home</a>
+        <a href="about.html" class="mobile-menu-link">About</a>
+        <a href="menu.html" class="mobile-menu-link">Menu</a>
+        <a href="gallery.html" class="mobile-menu-link">Gallery</a>
+        <a href="contact.html" class="mobile-menu-link active">Contact</a>
+        <a href="reservation.html" class="mobile-menu-btn">Reserve a Table</a>
       </div>
     </div>
   </nav>
 
-  <main class="pt-20">
-    <section class="relative py-20 lg:py-32 bg-primary">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-        <p class="text-secondary tracking-[0.2em] uppercase text-sm mb-4">Contact</p>
-        <h1 class="font-playfair text-5xl md:text-6xl text-cream mb-6">Get in Touch</h1>
-        <p class="font-cormorant text-cream/70 text-xl italic max-w-2xl mx-auto">We'd love to hear from you. Reach out with any questions or special requests.</p>
+  <main style="padding-top: 4rem;">
+    <section class="section section-bg-primary">
+      <div class="section-container text-center">
+        <p class="section-subtitle">Contact</p>
+        <h1 class="hero-title" style="color: var(--cream);">Get in Touch</h1>
+        <p class="font-cormorant italic" style="color: rgba(250,247,242,0.7); font-size: 1.25rem; max-width: 42rem; margin: 1rem auto 0;">We'd love to hear from you. Reach out with any questions or special requests.</p>
       </div>
     </section>
 
-    <section class="py-20 lg:py-32 bg-cream">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-12">
+    <section class="section section-bg-cream">
+      <div class="section-container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
           <div>
-            <div class="grid sm:grid-cols-2 gap-8 mb-12">
-              <div class="flex items-start">
-                <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                  <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <div style="display: flex; flex-direction: column; gap: 2rem; margin-bottom: 2rem;">
+              <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                <div style="width: 3rem; height: 3rem; background-color: rgba(201,169,98,0.1); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                  <svg style="width: 1.25rem; height: 1.25rem; color: var(--secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <div>
+                  <h3 style="font-weight: 500; color: var(--primary); margin-bottom: 0.5rem;">Location</h3>
+                  <p style="color: var(--muted); font-size: 0.875rem;">Plot 42, Kampala Road<br/>Kampala, Uganda</p>
+                </div>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                <div style="width: 3rem; height: 3rem; background-color: rgba(201,169,98,0.1); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                  <svg style="width: 1.25rem; height: 1.25rem; color: var(--secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                 </div>
                 <div>
                   <h3 class="font-medium text-primary mb-2">Location</h3>
@@ -100,77 +83,76 @@
                   <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                 </div>
                 <div>
-                  <h3 class="font-medium text-primary mb-2">Phone</h3>
-                  <p class="text-muted text-sm">+256 414 123 456<br/>+256 700 987 654</p>
+                  <h3 style="font-weight: 500; color: var(--primary); margin-bottom: 0.5rem;">Phone</h3>
+                  <p style="color: var(--muted); font-size: 0.875rem;">+256 414 123 456<br/>+256 700 987 654</p>
                 </div>
               </div>
-              <div class="flex items-start">
-                <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                  <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                <div style="width: 3rem; height: 3rem; background-color: rgba(201,169,98,0.1); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                  <svg style="width: 1.25rem; height: 1.25rem; color: var(--secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                 </div>
                 <div>
-                  <h3 class="font-medium text-primary mb-2">Email</h3>
-                  <p class="text-muted text-sm">info@ugandarestaurant.ug<br/>reservations@ugandarestaurant.ug</p>
+                  <h3 style="font-weight: 500; color: var(--primary); margin-bottom: 0.5rem;">Email</h3>
+                  <p style="color: var(--muted); font-size: 0.875rem;">info@ugandarestaurant.ug<br/>reservations@ugandarestaurant.ug</p>
                 </div>
               </div>
-              <div class="flex items-start">
-                <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                  <svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/><path stroke-width="2" d="M12 6v6l4 2"/></svg>
+              <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                <div style="width: 3rem; height: 3rem; background-color: rgba(201,169,98,0.1); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                  <svg style="width: 1.25rem; height: 1.25rem; color: var(--secondary);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/><path stroke-width="2" d="M12 6v6l4 2"/></svg>
                 </div>
                 <div>
-                  <h3 class="font-medium text-primary mb-2">Hours</h3>
-                  <p class="text-muted text-sm">Mon - Sun: 8AM - 10PM<br/>Happy Hour: 4PM - 7PM</p>
+                  <h3 style="font-weight: 500; color: var(--primary); margin-bottom: 0.5rem;">Hours</h3>
+                  <p style="color: var(--muted); font-size: 0.875rem;">Mon - Sun: 8AM - 10PM<br/>Happy Hour: 4PM - 7PM</p>
                 </div>
               </div>
             </div>
 
-            <div class="bg-white p-4 rounded-lg shadow-sm">
+            <div style="background-color: white; padding: 1rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8199!2d32.5825!3d0.3476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbc0f9f0b7e7b%3A0x5e1a2a4b4b4b4b4b!2sKampala%20Road%2C%20Kampala%2C%20Uganda!5e0!3m2!1sen!2s!4v1699574261827!5m2!1sen!2s" 
                 width="100%" 
                 height="350" 
-                style="border:0;" 
+                style="border:0; border-radius: 0.5rem;" 
                 allowFullScreen="" 
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
-                class="rounded-lg"
               ></iframe>
             </div>
           </div>
 
           <div>
-            <div class="bg-white p-8 rounded-lg shadow-sm">
-              <h3 class="font-playfair text-2xl text-primary mb-6">Send a Message</h3>
-              <form id="contactForm" class="space-y-6">
+            <div class="card" style="padding: 2rem;">
+              <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 1.5rem;">Send a Message</h3>
+              <form id="contactForm" style="display: flex; flex-direction: column; gap: 1.5rem;">
                 <div>
-                  <label class="block text-sm tracking-wider uppercase text-muted mb-2">Name</label>
-                  <input type="text" name="name" required class="w-full border border-primary/20 px-4 py-3 focus:border-secondary focus:outline-none transition-colors duration-300" />
+                  <label class="form-label">Name</label>
+                  <input type="text" name="name" required class="form-input" />
                 </div>
                 <div>
-                  <label class="block text-sm tracking-wider uppercase text-muted mb-2">Email</label>
-                  <input type="email" name="email" required class="w-full border border-primary/20 px-4 py-3 focus:border-secondary focus:outline-none transition-colors duration-300" />
+                  <label class="form-label">Email</label>
+                  <input type="email" name="email" required class="form-input" />
                 </div>
                 <div>
-                  <label class="block text-sm tracking-wider uppercase text-muted mb-2">Subject</label>
-                  <input type="text" name="subject" required class="w-full border border-primary/20 px-4 py-3 focus:border-secondary focus:outline-none transition-colors duration-300" />
+                  <label class="form-label">Subject</label>
+                  <input type="text" name="subject" required class="form-input" />
                 </div>
                 <div>
-                  <label class="block text-sm tracking-wider uppercase text-muted mb-2">Message</label>
-                  <textarea name="message" required rows="5" class="w-full border border-primary/20 px-4 py-3 focus:border-secondary focus:outline-none transition-colors duration-300 resize-none"></textarea>
+                  <label class="form-label">Message</label>
+                  <textarea name="message" required rows="5" class="form-textarea"></textarea>
                 </div>
-                <button type="submit" class="w-full bg-primary text-cream py-4 text-sm tracking-wider uppercase font-medium hover:bg-primary/90 transition-colors duration-300 flex items-center justify-center gap-2">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                <button type="submit" class="btn btn-primary" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                  <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
                   Send Message
                 </button>
               </form>
 
-              <div id="successMessage" class="hidden text-center py-8">
-                <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
-                  <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <div id="contactSuccess" class="hidden" style="text-align: center; padding: 2rem;">
+                <div style="width: 4rem; height: 4rem; background-color: var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                  <svg style="width: 2rem; height: 2rem; color: var(--primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                 </div>
-                <h3 class="font-playfair text-2xl text-primary mb-4">Message Sent!</h3>
-                <p class="text-muted mb-6">Thank you for reaching out. We'll get back to you within 24 hours.</p>
-                <button onclick="resetForm()" class="text-secondary hover:underline">Send another message</button>
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 1rem;">Message Sent!</h3>
+                <p style="color: var(--muted); margin-bottom: 1.5rem;">Thank you for reaching out. We'll get back to you within 24 hours.</p>
+                <button onclick="ugandaRestaurant.resetContactForm()" style="color: var(--secondary); text-decoration: underline; background: none; border: none; cursor: pointer;">Send another message</button>
               </div>
             </div>
           </div>
@@ -178,105 +160,76 @@
       </div>
     </section>
 
-    <section class="py-20 bg-secondary">
-      <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-        <h2 class="font-playfair text-4xl text-primary mb-6">Follow Us</h2>
-        <p class="text-primary/80 text-lg mb-8">Stay connected on social media for updates, special offers, and more.</p>
-        <div class="flex justify-center space-x-6">
-          <a href="#" class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-cream hover:bg-secondary hover:text-primary transition-all duration-300">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+    <section class="section section-bg-secondary">
+      <div class="section-container text-center" style="max-width: 42rem;">
+        <h2 class="section-title" style="color: var(--primary);">Follow Us</h2>
+        <p style="color: rgba(26,26,26,0.8); margin-bottom: 2rem; font-size: 1.125rem;">Stay connected on social media for updates, special offers, and more.</p>
+        <div style="display: flex; justify-content: center; gap: 1.5rem;">
+          <a href="#" style="width: 3.5rem; height: 3.5rem; background-color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--cream); transition: all 0.3s ease;">
+            <svg style="width: 1.5rem; height: 1.5rem;" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
           </a>
-          <a href="#" class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-cream hover:bg-secondary hover:text-primary transition-all duration-300">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          <a href="#" style="width: 3.5rem; height: 3.5rem; background-color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--cream); transition: all 0.3s ease;">
+            <svg style="width: 1.5rem; height: 1.5rem;" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
           </a>
-          <a href="#" class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-cream hover:bg-secondary hover:text-primary transition-all duration-300">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <a href="#" style="width: 3.5rem; height: 3.5rem; background-color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--cream); transition: all 0.3s ease;">
+            <svg style="width: 1.5rem; height: 1.5rem;" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           </a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="bg-primary pt-12 sm:pt-16 pb-6 sm:pb-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-12">
-        <div class="col-span-2 lg:col-span-1">
-          <div class="mb-4 sm:mb-6"><span class="font-playfair text-lg sm:text-xl md:text-2xl font-semibold text-secondary">uganda</span><span class="font-playfair text-lg sm:text-xl md:text-2xl text-cream ml-1">RESTAURANT</span></div>
-          <p class="text-cream/60 text-xs sm:text-sm leading-relaxed">Experience the authentic flavors of Uganda in the heart of Kampala.</p>
-          <div class="flex space-x-3 sm:space-x-4 mt-4 sm:mt-6">
-            <a href="#" class="w-8 sm:w-10 h-8 sm:h-10 bg-cream/10 rounded-full flex items-center justify-center text-cream/60 hover:bg-secondary hover:text-primary transition-all duration-300">
-              <svg class="w-4 sm:w-5 h-4 sm:h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">uganda<span class="footer-logo-secondary">RESTAURANT</span></div>
+          <p class="footer-text">Experience the authentic flavors of Uganda in the heart of Kampala.</p>
+          <div class="social-links">
+            <a href="#" class="social-link">
+              <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
             </a>
-            <a href="#" class="w-8 sm:w-10 h-8 sm:h-10 bg-cream/10 rounded-full flex items-center justify-center text-cream/60 hover:bg-secondary hover:text-primary transition-all duration-300">
-              <svg class="w-4 sm:w-5 h-4 sm:h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            <a href="#" class="social-link">
+              <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             </a>
-            <a href="#" class="w-8 sm:w-10 h-8 sm:h-10 bg-cream/10 rounded-full flex items-center justify-center text-cream/60 hover:bg-secondary hover:text-primary transition-all duration-300">
-              <svg class="w-4 sm:w-5 h-4 sm:h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <a href="#" class="social-link">
+              <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
           </div>
         </div>
         <div>
-          <h4 class="text-cream font-medium mb-4 sm:mb-6 tracking-wider uppercase text-xs sm:text-sm">Quick Links</h4>
-          <ul class="space-y-2 text-xs sm:text-sm">
-            <li><a href="index.html" class="text-cream/60 hover:text-secondary transition-colors duration-300">Home</a></li>
-            <li><a href="about.html" class="text-cream/60 hover:text-secondary transition-colors duration-300">About</a></li>
-            <li><a href="menu.html" class="text-cream/60 hover:text-secondary transition-colors duration-300">Menu</a></li>
-            <li><a href="gallery.html" class="text-cream/60 hover:text-secondary transition-colors duration-300">Gallery</a></li>
-            <li><a href="contact.html" class="text-cream/60 hover:text-secondary transition-colors duration-300">Contact</a></li>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="text-cream font-medium mb-4 sm:mb-6 tracking-wider uppercase text-xs sm:text-sm">Hours</h4>
-          <ul class="space-y-2 text-xs sm:text-sm text-cream/60">
+          <h4 class="footer-title">Hours</h4>
+          <ul class="footer-links">
             <li>Monday - Sunday</li>
             <li>8:00 AM - 10:00 PM</li>
             <li>Happy Hour: 4PM - 7PM</li>
           </ul>
         </div>
         <div>
-          <h4 class="text-cream font-medium mb-4 sm:mb-6 tracking-wider uppercase text-xs sm:text-sm">Contact</h4>
-          <ul class="space-y-2 text-xs sm:text-sm text-cream/60">
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-links">
             <li>Plot 42, Kampala Road</li>
             <li>Kampala, Uganda</li>
             <li>+256 414 123 456</li>
           </ul>
         </div>
       </div>
-      <div class="border-t border-cream/10 pt-6 sm:pt-8 text-center">
-        <p class="text-cream/40 text-xs sm:text-sm">© 2024 uganda Restaurant. All rights reserved.</p>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2024 uganda Restaurant. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-  <script>
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuOpen = mobileMenuBtn.querySelector('.menu-open');
-    const menuClose = mobileMenuBtn.querySelector('.menu-close');
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      menuOpen.classList.toggle('hidden');
-      menuClose.classList.toggle('hidden');
-    });
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        menuOpen.classList.remove('hidden');
-        menuClose.classList.add('hidden');
-      });
-    });
-
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      document.getElementById('contactForm').classList.add('hidden');
-      document.getElementById('successMessage').classList.remove('hidden');
-    });
-
-    function resetForm() {
-      document.getElementById('contactForm').classList.remove('hidden');
-      document.getElementById('successMessage').classList.add('hidden');
-      document.getElementById('contactForm').reset();
-    }
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
